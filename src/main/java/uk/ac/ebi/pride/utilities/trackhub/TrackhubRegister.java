@@ -153,7 +153,7 @@ public class TrackhubRegister {
      * @throws JSONException Exception when reading/writing JSON to Registry.
      * @throws HttpException Exception when reading/writing JSON to Registry.
      */
-    private void postTrackhub() throws IOException, JSONException, HttpException {
+    public void postTrackhub() throws IOException, JSONException, HttpException {
         logger.info("Attempting to post track hub.");
         try (CloseableHttpClient httpclient = HttpClientBuilder.create().build()) {
             HttpPost httppost = new HttpPost(server + "/api/trackhub");
