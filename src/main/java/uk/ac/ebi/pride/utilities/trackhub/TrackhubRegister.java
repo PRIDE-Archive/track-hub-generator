@@ -62,7 +62,7 @@ public class TrackhubRegister {
     /**
      * Default constructor. All parameters will need to be specified separately.
      */
-    public void TrackHubRegister() {
+    public TrackhubRegister() {
     }
 
     /**
@@ -75,8 +75,7 @@ public class TrackhubRegister {
      * @param searchType Should the track hub be visible in Registry search results or not.
      * @param assemblies The assemblies present on the track hub.
      */
-
-    public void TrackHubRegister(String server, String user, String password, String url, PostType postType, SearchType searchType, Map<String, String> assemblies) {
+    public TrackhubRegister(String server, String user, String password, String url, PostType postType, SearchType searchType, Map<String, String> assemblies) {
         this.server = server;
         this.user = user;
         this.url = url;
