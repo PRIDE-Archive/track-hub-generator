@@ -26,7 +26,7 @@ import java.io.InputStream;
 import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
-import java.util.Map;
+import java.util.List;
 
 /**
  * This class will login to the supplied Registry, post a track hub, and logout.
@@ -44,8 +44,21 @@ public class TrackhubRegister {
     private String url;
     private PostType postType;
     private SearchType searchType;
-    private Map<String, String> assemblies;
+    private List<Assembly> assemblies;
 
+    public enum Assembly {
+        hg38("GCA_000001405.21");
+
+        private String INSDC;
+
+        Assembly(String insdc) {
+            this.INSDC = insdc;
+        }
+        public String getINSDC() {
+            return INSDC;
+        }
+
+    }
     public enum PostType {GENOMICS, EPIGENOMICS, TRANSCRIPTOMICS, PROTEOMICS}
 
     public enum SearchType {PUBLIC(1), PRIVATE(0);
@@ -75,7 +88,7 @@ public class TrackhubRegister {
      * @param searchType Should the track hub be visible in Registry search results or not.
      * @param assemblies The assemblies present on the track hub.
      */
-    public TrackhubRegister(String server, String user, String password, String url, PostType postType, SearchType searchType, Map<String, String> assemblies) {
+    public TrackhubRegister(String server, String user, String password, String url, PostType postType, SearchType searchType, List<Assembly> assemblies) {
         this.server = server;
         this.user = user;
         this.url = url;
@@ -164,9 +177,9 @@ public class TrackhubRegister {
             json.put("public", searchType.getValue());
             JSONObject jsonAssemblies = new JSONObject();
             if (assemblies.size()>0) {
-                assemblies.keySet().stream().forEach(assemblyKey -> {
+                assemblies.stream().forEach(assembly -> {
                         try {
-                            jsonAssemblies.put(assemblyKey, assemblies.get(assemblyKey));
+                            jsonAssemblies.put(assembly.name(), assembly.getINSDC());
                         } catch (JSONException e) {
                             logger.error("Problem when adding assemblies. " + e);
                         }
@@ -250,11 +263,11 @@ public class TrackhubRegister {
         this.searchType = searchType;
     }
 
-    public Map<String, String> getAssemblies() {
+    public List<Assembly> getAssemblies() {
         return assemblies;
     }
 
-    public void setAssemblies(Map<String, String> assemblies) {
+    public void setAssemblies(List<Assembly> assemblies) {
         this.assemblies = assemblies;
     }
 
