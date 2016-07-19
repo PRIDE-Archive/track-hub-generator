@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/PRIDE-Utilities/track-hub-generator.svg?branch=master)](https://travis-ci.org/PRIDE-Utilities/track-hub-generator)
 # track-hub-generator
 Generates and updates track hubs for use with the Ensembl Track Hub Registry.
 
