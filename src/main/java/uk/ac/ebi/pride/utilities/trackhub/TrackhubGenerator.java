@@ -136,7 +136,7 @@ public class TrackhubGenerator {
                 start();
             }
         } catch (IOException ioe) {
-            logger.error("Error while creating/udating track hub." , ioe);
+            logger.error("Error while creating/updating track hub." , ioe);
         }
     }
 
