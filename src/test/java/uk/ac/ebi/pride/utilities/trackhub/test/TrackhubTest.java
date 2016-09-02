@@ -41,7 +41,8 @@ public class TrackhubTest {
 
     @After
     public void tearDown() throws Exception {
-        tempTrackHub.toFile().delete(); //not needed when deleteOnExit specified
+        boolean deleted = tempTrackHub.toFile().delete(); //not needed when deleteOnExit specified
+        logger.info("Manually deleted temp track hub: " + deleted);
     }
 
     @Test
