@@ -177,13 +177,13 @@ public class TrackhubRegister {
             json.put("public", searchType.getValue());
             JSONObject jsonAssemblies = new JSONObject();
             if (assemblies.size()>0) {
-                assemblies.stream().forEach(assembly -> {
-                        try {
-                            jsonAssemblies.put(assembly.name(), assembly.getINSDC());
-                        } catch (JSONException e) {
-                            logger.error("Problem when adding assemblies. " + e);
-                        }
-                    });
+                assemblies.forEach(assembly -> {
+                    try {
+                        jsonAssemblies.put(assembly.name(), assembly.getINSDC());
+                    } catch (JSONException e) {
+                        logger.error("Problem when adding assemblies. " + e);
+                    }
+                });
                 json.put("assembliesNames", jsonAssemblies);
             } else {
                 logger.error("Unable to read assemblies.");
