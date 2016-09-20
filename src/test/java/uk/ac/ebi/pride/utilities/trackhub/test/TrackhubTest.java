@@ -24,6 +24,10 @@ public class TrackhubTest {
     private Path tempTrackHub;
     private TrackhubRegister thr;
 
+    /**
+     * Sets up a temporary track hub.
+     * @throws Exception
+     */
     @Before
     public void setUp() throws Exception {
         tempTrackHub = Files.createTempDirectory("TempTrackhub");
@@ -39,17 +43,29 @@ public class TrackhubTest {
         thr.setPassword("pride-test");
     }
 
+    /**
+     * Deletes the temporary track hub that was created with setUp().
+     * @throws Exception
+     */
     @After
     public void tearDown() throws Exception {
         boolean deleted = tempTrackHub.toFile().delete(); //not needed when deleteOnExit specified
         logger.info("Manually deleted temp track hub: " + deleted);
     }
 
+    /**
+     * Test generating a new track hub.
+     * @throws Exception
+     */
     @Test
     public void testGenerate() throws Exception {
         thg.createTrackHub();
     }
 
+    /**
+     * Test login and logout.
+     * @throws Exception
+     */
     @Test
     public void testLoginLogout() throws Exception {
         thr.login();
