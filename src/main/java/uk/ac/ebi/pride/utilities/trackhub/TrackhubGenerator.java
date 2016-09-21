@@ -211,7 +211,7 @@ public class TrackhubGenerator {
      * This method writes out the track information.
      * @param trackDbTxt The trackDb.txt file.
      * @param append Output will be appended to the end of the trackDb.txt file, or otherwise.
-     * @throws IOException
+     * @throws IOException if there are problems with writing the track file
      */
     private void writeTrack(File trackDbTxt, boolean append) throws IOException {
         Writer fileWriter = new FileWriter(trackDbTxt, append);
@@ -220,7 +220,7 @@ public class TrackhubGenerator {
         fileWriter.write("shortLabel " + trackShortLabel + "\n");
         fileWriter.write("longLabel " + trackLongLabel + "\n");
         StringBuilder metadata = new StringBuilder("metadata ");
-        metadata.append("track_added_date=\"" + new SimpleDateFormat("EEE MMM YY HH:MM:ss YYYY z").format(new Date()) + "\" ");
+        metadata.append("track_added_date=\"").append(new SimpleDateFormat("EEE MMM YY HH:MM:ss YYYY z").format(new Date())).append("\" ");
         if (!StringUtils.isBlank(trackTissue)) {
             metadata.append("tissue_type=\"").append(trackTissue).append("\" ");
         }
@@ -254,6 +254,7 @@ public class TrackhubGenerator {
             metadata.append("first_public=\"").append(trackPubDate).append("\"");
         }
         metadata.append('\n');
+        // TODO metadata not used at all because it's not used/indexed by the registry. Remove?
         fileWriter.write("type " + trackType + "\n");
         fileWriter.write("\n");
         fileWriter.close();
