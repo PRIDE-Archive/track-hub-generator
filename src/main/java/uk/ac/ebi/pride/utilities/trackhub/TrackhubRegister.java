@@ -46,6 +46,9 @@ public class TrackhubRegister {
     private SearchType searchType;
     private List<Assembly> assemblies;
 
+    /**
+     * Genome assembly restricted list.
+     */
     public enum Assembly {
         hg38("GCA_000001405.21");
 
@@ -57,10 +60,16 @@ public class TrackhubRegister {
         public String getINSDC() {
             return INSDC;
         }
+    } //TODO Perhaps this should be more flexible and allow this to be set by a String? OTherwise it will need to be updated constantly as required.
 
-    }
+    /**
+     * Restricted list of allowable track hub post types.
+     */
     public enum PostType {GENOMICS, EPIGENOMICS, TRANSCRIPTOMICS, PROTEOMICS}
 
+    /**
+     * Restricted list of allowable search types.
+     */
     public enum SearchType {PUBLIC(1), PRIVATE(0);
         private final int value;
         SearchType(int value) {
@@ -207,68 +216,147 @@ public class TrackhubRegister {
     }
 
 
-    public String getServer() {
-        return server;
-    }
+  /**
+   * Sets new server.
+   *
+   * @param server New value of server.
+   */
+  public void setServer(String server) {
+    this.server = server;
+  }
 
-    public void setServer(String server) {
-        this.server = server;
-    }
+  /**
+   * Sets new assemblies.
+   *
+   * @param assemblies New value of assemblies.
+   */
+  public void setAssemblies(List<Assembly> assemblies) {
+    this.assemblies = assemblies;
+  }
 
-    public String getUser() {
-        return user;
-    }
+  /**
+   * Gets postType.
+   *
+   * @return Value of postType.
+   */
+  public PostType getPostType() {
+    return postType;
+  }
 
-    public void setUser(String user) {
-        this.user = user;
-    }
+  /**
+   * Sets new postType.
+   *
+   * @param postType New value of postType.
+   */
+  public void setPostType(PostType postType) {
+    this.postType = postType;
+  }
 
-    public String getPassword() {
-        return password;
-    }
+  /**
+   * Sets new password.
+   *
+   * @param password New value of password.
+   */
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+  /**
+   * Gets searchType.
+   *
+   * @return Value of searchType.
+   */
+  public SearchType getSearchType() {
+    return searchType;
+  }
 
-    public String getAuthToken() {
-        return authToken;
-    }
+  /**
+   * Sets new authToken.
+   *
+   * @param authToken New value of authToken.
+   */
+  public void setAuthToken(String authToken) {
+    this.authToken = authToken;
+  }
 
-    public void setAuthToken(String authToken) {
-        this.authToken = authToken;
-    }
+  /**
+   * Gets assemblies.
+   *
+   * @return Value of assemblies.
+   */
+  public List<Assembly> getAssemblies() {
+    return assemblies;
+  }
 
-    public String getUrl() {
-        return url;
-    }
+  /**
+   * Sets new searchType.
+   *
+   * @param searchType New value of searchType.
+   */
+  public void setSearchType(SearchType searchType) {
+    this.searchType = searchType;
+  }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+  /**
+   * Gets password.
+   *
+   * @return Value of password.
+   */
+  public String getPassword() {
+    return password;
+  }
 
-    public PostType getPostType() {
-        return postType;
-    }
+  /**
+   * Gets url.
+   *
+   * @return Value of url.
+   */
+  public String getUrl() {
+    return url;
+  }
 
-    public void setPostType(PostType postType) {
-        this.postType = postType;
-    }
+  /**
+   * Gets server.
+   *
+   * @return Value of server.
+   */
+  public String getServer() {
+    return server;
+  }
 
-    public SearchType getSearchType() {
-        return searchType;
-    }
+  /**
+   * Gets user.
+   *
+   * @return Value of user.
+   */
+  public String getUser() {
+    return user;
+  }
 
-    public void setSearchType(SearchType searchType) {
-        this.searchType = searchType;
-    }
+  /**
+   * Sets new user.
+   *
+   * @param user New value of user.
+   */
+  public void setUser(String user) {
+    this.user = user;
+  }
 
-    public List<Assembly> getAssemblies() {
-        return assemblies;
-    }
+  /**
+   * Sets new url.
+   *
+   * @param url New value of url.
+   */
+  public void setUrl(String url) {
+    this.url = url;
+  }
 
-    public void setAssemblies(List<Assembly> assemblies) {
-        this.assemblies = assemblies;
-    }
-
+  /**
+   * Gets authToken.
+   *
+   * @return Value of authToken.
+   */
+  public String getAuthToken() {
+    return authToken;
+  }
 }

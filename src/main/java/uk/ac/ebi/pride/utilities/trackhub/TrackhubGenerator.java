@@ -325,196 +325,435 @@ public class TrackhubGenerator {
         return result;
     }
 
-    public String getHubName() {
-        return hubName;
-    }
+  /**
+   * Gets trackInstruments.
+   *
+   * @return Value of trackInstruments.
+   */
+  public String getTrackInstruments() {
+    return trackInstruments;
+  }
 
-    public void setHubName(String hubName) {
-        this.hubName = hubName;
-    }
+  /**
+   * Sets new trackInstruments.
+   *
+   * @param trackInstruments New value of trackInstruments.
+   */
+  public void setTrackInstruments(String trackInstruments) {
+    this.trackInstruments = trackInstruments;
+  }
 
-    public String getTrackName() {
-        return trackName;
-    }
+  /**
+   * Sets new trackCellType.
+   *
+   * @param trackCellType New value of trackCellType.
+   */
+  public void setTrackCellType(String trackCellType) {
+    this.trackCellType = trackCellType;
+  }
 
-    public void setTrackName(String trackName) {
-        this.trackName = trackName;
-    }
+  /**
+   * Sets new hubName.
+   *
+   * @param hubName New value of hubName.
+   */
+  public void setHubName(String hubName) {
+    this.hubName = hubName;
+  }
 
-    public String getEmailAddress() {
-        return emailAddress;
-    }
+  /**
+   * Sets new bigDataURL.
+   *
+   * @param bigDataURL New value of bigDataURL.
+   */
+  public void setBigDataURL(String bigDataURL) {
+    this.bigDataURL = bigDataURL;
+  }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
+  /**
+   * Gets trackLongLabel.
+   *
+   * @return Value of trackLongLabel.
+   */
+  public String getTrackLongLabel() {
+    return trackLongLabel;
+  }
 
-    public String getSpeciesShort() {
-        return speciesShort;
-    }
+  /**
+   * Sets new centre.
+   *
+   * @param centre New value of centre.
+   */
+  public void setCentre(String centre) {
+    this.centre = centre;
+  }
 
-    public void setSpeciesShort(String speciesShort) {
-        this.speciesShort = speciesShort;
-    }
+  /**
+   * Gets trackhub.
+   *
+   * @return Value of trackhub.
+   */
+  public File getTrackhub() {
+    return trackhub;
+  }
 
-    public String getSpeciesSci() {
-        return speciesSci;
-    }
+  /**
+   * Sets new speciesShort.
+   *
+   * @param speciesShort New value of speciesShort.
+   */
+  public void setSpeciesShort(String speciesShort) {
+    this.speciesShort = speciesShort;
+  }
 
-    public void setSpeciesSci(String speciesSci) {
-        this.speciesSci = speciesSci;
-    }
+  /**
+   * Sets new fileType.
+   *
+   * @param fileType New value of fileType.
+   */
+  public void setFileType(String fileType) {
+    this.fileType = fileType;
+  }
 
-    public String getAssembly() {
-        return assembly;
-    }
+  /**
+   * Sets new trackhub.
+   *
+   * @param trackhub New value of trackhub.
+   */
+  public void setTrackhub(File trackhub) {
+    this.trackhub = trackhub;
+  }
 
-    public void setAssembly(String assembly) {
-        this.assembly = assembly;
-    }
+  /**
+   * Sets new hubShortLabel.
+   *
+   * @param hubShortLabel New value of hubShortLabel.
+   */
+  public void setHubShortLabel(String hubShortLabel) {
+    this.hubShortLabel = hubShortLabel;
+  }
 
-    public String getFileType() {
-        return fileType;
-    }
+  /**
+   * Gets speciesShort.
+   *
+   * @return Value of speciesShort.
+   */
+  public String getSpeciesShort() {
+    return speciesShort;
+  }
 
-    public void setFileType(String fileType) {
-        this.fileType = fileType;
-    }
+  /**
+   * Sets new trackType.
+   *
+   * @param trackType New value of trackType.
+   */
+  public void setTrackType(TrackType trackType) {
+    this.trackType = trackType;
+  }
 
-    public String getBigDataURL() {
-        return bigDataURL;
-    }
+  /**
+   * Gets trackShortLabel.
+   *
+   * @return Value of trackShortLabel.
+   */
+  public String getTrackShortLabel() {
+    return trackShortLabel;
+  }
 
-    public void setBigDataURL(String bigDataURL) {
-        this.bigDataURL = bigDataURL;
-    }
+  /**
+   * Gets fileType.
+   *
+   * @return Value of fileType.
+   */
+  public String getFileType() {
+    return fileType;
+  }
 
-    public String getCentre() {
-        return centre;
-    }
+  /**
+   * Gets assembly.
+   *
+   * @return Value of assembly.
+   */
+  public String getAssembly() {
+    return assembly;
+  }
 
-    public void setCentre(String centre) {
-        this.centre = centre;
-    }
+  /**
+   * Sets new speciesSci.
+   *
+   * @param speciesSci New value of speciesSci.
+   */
+  public void setSpeciesSci(String speciesSci) {
+    this.speciesSci = speciesSci;
+  }
 
-    public String getHubShortLabel() {
-        return hubShortLabel;
-    }
+  /**
+   * Gets trackPubDate.
+   *
+   * @return Value of trackPubDate.
+   */
+  public String getTrackPubDate() {
+    return trackPubDate;
+  }
 
-    public void setHubShortLabel(String hubShortLabel) {
-        this.hubShortLabel = hubShortLabel;
-    }
+  /**
+   * Gets trackDisese.
+   *
+   * @return Value of trackDisese.
+   */
+  public String getTrackDisese() {
+    return trackDisese;
+  }
 
-    public String getHubLongLabel() {
-        return hubLongLabel;
-    }
+  /**
+   * Sets new trackTaxaID.
+   *
+   * @param trackTaxaID New value of trackTaxaID.
+   */
+  public void setTrackTaxaID(String trackTaxaID) {
+    this.trackTaxaID = trackTaxaID;
+  }
 
-    public void setHubLongLabel(String hubLongLabel) {
-        this.hubLongLabel = hubLongLabel;
-    }
+  /**
+   * Gets centre.
+   *
+   * @return Value of centre.
+   */
+  public String getCentre() {
+    return centre;
+  }
 
-    public String getTrackShortLabel() {
-        return trackShortLabel;
-    }
+  /**
+   * Sets new emailAddress.
+   *
+   * @param emailAddress New value of emailAddress.
+   */
+  public void setEmailAddress(String emailAddress) {
+    this.emailAddress = emailAddress;
+  }
 
-    public void setTrackShortLabel(String trackShortLabel) {
-        this.trackShortLabel = trackShortLabel;
-    }
+  /**
+   * Sets new trackPubReference.
+   *
+   * @param trackPubReference New value of trackPubReference.
+   */
+  public void setTrackPubReference(String trackPubReference) {
+    this.trackPubReference = trackPubReference;
+  }
 
-    public String getTrackLongLabel() {
-        return trackLongLabel;
-    }
+  /**
+   * Gets trackName.
+   *
+   * @return Value of trackName.
+   */
+  public String getTrackName() {
+    return trackName;
+  }
 
-    public void setTrackLongLabel(String trackLongLabel) {
-        this.trackLongLabel = trackLongLabel;
-    }
+  /**
+   * Gets trackOtherOmics.
+   *
+   * @return Value of trackOtherOmics.
+   */
+  public String getTrackOtherOmics() {
+    return trackOtherOmics;
+  }
 
-    public String getTrackTaxaID() {
-        return trackTaxaID;
-    }
+  /**
+   * Gets hubName.
+   *
+   * @return Value of hubName.
+   */
+  public String getHubName() {
+    return hubName;
+  }
 
-    public void setTrackTaxaID(String trackTaxaID) {
-        this.trackTaxaID = trackTaxaID;
-    }
+  /**
+   * Sets new trackKeywords.
+   *
+   * @param trackKeywords New value of trackKeywords.
+   */
+  public void setTrackKeywords(String trackKeywords) {
+    this.trackKeywords = trackKeywords;
+  }
 
-    public String getTrackTissue() {
-        return trackTissue;
-    }
+  /**
+   * Sets new trackPubDate.
+   *
+   * @param trackPubDate New value of trackPubDate.
+   */
+  public void setTrackPubDate(String trackPubDate) {
+    this.trackPubDate = trackPubDate;
+  }
 
-    public void setTrackTissue(String trackTissue) {
-        this.trackTissue = trackTissue;
-    }
+  /**
+   * Gets trackTissue.
+   *
+   * @return Value of trackTissue.
+   */
+  public String getTrackTissue() {
+    return trackTissue;
+  }
 
-    public String getTrackCellType() {
-        return trackCellType;
-    }
+  /**
+   * Gets speciesSci.
+   *
+   * @return Value of speciesSci.
+   */
+  public String getSpeciesSci() {
+    return speciesSci;
+  }
 
-    public void setTrackCellType(String trackCellType) {
-        this.trackCellType = trackCellType;
-    }
+  /**
+   * Sets new trackDisese.
+   *
+   * @param trackDisese New value of trackDisese.
+   */
+  public void setTrackDisese(String trackDisese) {
+    this.trackDisese = trackDisese;
+  }
 
-    public String getTrackDisese() {
-        return trackDisese;
-    }
+  /**
+   * Sets new trackOtherOmics.
+   *
+   * @param trackOtherOmics New value of trackOtherOmics.
+   */
+  public void setTrackOtherOmics(String trackOtherOmics) {
+    this.trackOtherOmics = trackOtherOmics;
+  }
 
-    public void setTrackDisese(String trackDisese) {
-        this.trackDisese = trackDisese;
-    }
+  /**
+   * Sets new hubLongLabel.
+   *
+   * @param hubLongLabel New value of hubLongLabel.
+   */
+  public void setHubLongLabel(String hubLongLabel) {
+    this.hubLongLabel = hubLongLabel;
+  }
 
-    public String getTrackPubDate() {
-        return trackPubDate;
-    }
+  /**
+   * Gets trackKeywords.
+   *
+   * @return Value of trackKeywords.
+   */
+  public String getTrackKeywords() {
+    return trackKeywords;
+  }
 
-    public void setTrackPubDate(String trackPubDate) {
-        this.trackPubDate = trackPubDate;
-    }
+  /**
+   * Sets new trackTissue.
+   *
+   * @param trackTissue New value of trackTissue.
+   */
+  public void setTrackTissue(String trackTissue) {
+    this.trackTissue = trackTissue;
+  }
 
-    public String getTrackInstruments() {
-        return trackInstruments;
-    }
+  /**
+   * Gets hubShortLabel.
+   *
+   * @return Value of hubShortLabel.
+   */
+  public String getHubShortLabel() {
+    return hubShortLabel;
+  }
 
-    public void setTrackInstruments(String trackInstruments) {
-        this.trackInstruments = trackInstruments;
-    }
+  /**
+   * Gets trackPubReference.
+   *
+   * @return Value of trackPubReference.
+   */
+  public String getTrackPubReference() {
+    return trackPubReference;
+  }
 
-    public String getTrackKeywords() {
-        return trackKeywords;
-    }
+  /**
+   * Sets new trackShortLabel.
+   *
+   * @param trackShortLabel New value of trackShortLabel.
+   */
+  public void setTrackShortLabel(String trackShortLabel) {
+    this.trackShortLabel = trackShortLabel;
+  }
 
-    public void setTrackKeywords(String trackKeywords) {
-        this.trackKeywords = trackKeywords;
-    }
+  /**
+   * Sets new trackLongLabel.
+   *
+   * @param trackLongLabel New value of trackLongLabel.
+   */
+  public void setTrackLongLabel(String trackLongLabel) {
+    this.trackLongLabel = trackLongLabel;
+  }
 
-    public String getTrackOtherOmics() {
-        return trackOtherOmics;
-    }
+  /**
+   * Gets emailAddress.
+   *
+   * @return Value of emailAddress.
+   */
+  public String getEmailAddress() {
+    return emailAddress;
+  }
 
-    public void setTrackOtherOmics(String trackOtherOmics) {
-        this.trackOtherOmics = trackOtherOmics;
-    }
+  /**
+   * Gets trackCellType.
+   *
+   * @return Value of trackCellType.
+   */
+  public String getTrackCellType() {
+    return trackCellType;
+  }
 
-    public String getTrackPubReference() {
-        return trackPubReference;
-    }
+  /**
+   * Gets trackTaxaID.
+   *
+   * @return Value of trackTaxaID.
+   */
+  public String getTrackTaxaID() {
+    return trackTaxaID;
+  }
 
-    public void setTrackPubReference(String trackPubReference) {
-        this.trackPubReference = trackPubReference;
-    }
+  /**
+   * Gets trackType.
+   *
+   * @return Value of trackType.
+   */
+  public TrackType getTrackType() {
+    return trackType;
+  }
 
-    public File getTrackhub() {
-        return trackhub;
-    }
+  /**
+   * Gets hubLongLabel.
+   *
+   * @return Value of hubLongLabel.
+   */
+  public String getHubLongLabel() {
+    return hubLongLabel;
+  }
 
-    public void setTrackhub(File trackhub) {
-        this.trackhub = trackhub;
-    }
+  /**
+   * Sets new trackName.
+   *
+   * @param trackName New value of trackName.
+   */
+  public void setTrackName(String trackName) {
+    this.trackName = trackName;
+  }
 
-    public TrackType getTrackType() {
-        return trackType;
-    }
+  /**
+   * Gets bigDataURL.
+   *
+   * @return Value of bigDataURL.
+   */
+  public String getBigDataURL() {
+    return bigDataURL;
+  }
 
-    public void setTrackType(TrackType trackType) {
-        this.trackType = trackType;
-    }
-
+  /**
+   * Sets new assembly.
+   *
+   * @param assembly New value of assembly.
+   */
+  public void setAssembly(String assembly) {
+    this.assembly = assembly;
+  }
 }
